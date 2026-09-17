@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"can0\startup_stm32f103xb.o"
+"can0\main.o"
+"can0\gpio.o"
+"can0\can.o"
+"can0\stm32f1xx_it.o"
+"can0\stm32f1xx_hal_msp.o"
+"can0\stm32f1xx_hal_gpio_ex.o"
+"can0\stm32f1xx_hal_can.o"
+"can0\stm32f1xx_hal.o"
+"can0\stm32f1xx_hal_rcc.o"
+"can0\stm32f1xx_hal_rcc_ex.o"
+"can0\stm32f1xx_hal_gpio.o"
+"can0\stm32f1xx_hal_dma.o"
+"can0\stm32f1xx_hal_cortex.o"
+"can0\stm32f1xx_hal_pwr.o"
+"can0\stm32f1xx_hal_flash.o"
+"can0\stm32f1xx_hal_flash_ex.o"
+"can0\stm32f1xx_hal_exti.o"
+"can0\system_stm32f1xx.o"
+"can0\oled.o"
+--strict --scatter "CAN0\CAN0.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "CAN0.map" -o CAN0\CAN0.axf
