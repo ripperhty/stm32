@@ -222,27 +222,27 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		{
 			case('W'):
 			{
-				y_pos=y_pos+((int32_t)(speed*0.1f));
+				y_pos=y_pos-((int32_t)(speed*0.1f));
 				if(y_pos>63)
 				{
-					y_pos=63;
+					y_pos=0;
 				}
 				if(y_pos<0)
 				{
-					y_pos=0;
+					y_pos=63;
 				}
 				break;
 			}
 			case('S'):
 			{
-				y_pos=y_pos-((int32_t)(speed*0.1f));
+				y_pos=y_pos+((int32_t)(speed*0.1f));
 				if(y_pos>63)
 				{
-					y_pos=63;
+					y_pos=0;
 				}
 				if(y_pos<0)
 				{
-					y_pos=0;
+					y_pos=63;
 				}
 				break;
 			}
@@ -251,11 +251,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 				x_pos=x_pos-((int32_t)(speed*0.1f));
 				if(x_pos>127)
 				{
-					x_pos=127;
+					x_pos=0;
 				}
 				if(x_pos<0)
 				{
-					x_pos=0;
+					x_pos=127;
 				}
 				break;
 			}
@@ -264,11 +264,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 				x_pos=x_pos+((int32_t)(speed*0.1f));
 				if(x_pos>127)
 				{
-					x_pos=127;
+					x_pos=0;
 				}
 				if(x_pos<0)
 				{
-					x_pos=0;
+					x_pos=127;
 				}
 				break;
 			}

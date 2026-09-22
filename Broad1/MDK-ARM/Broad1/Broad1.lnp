@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"broad1\startup_stm32f103xb.o"
+"broad1\main.o"
+"broad1\gpio.o"
+"broad1\can.o"
+"broad1\i2c.o"
+"broad1\stm32f1xx_it.o"
+"broad1\stm32f1xx_hal_msp.o"
+"broad1\stm32f1xx_hal_gpio_ex.o"
+"broad1\stm32f1xx_hal_can.o"
+"broad1\stm32f1xx_hal.o"
+"broad1\stm32f1xx_hal_rcc.o"
+"broad1\stm32f1xx_hal_rcc_ex.o"
+"broad1\stm32f1xx_hal_gpio.o"
+"broad1\stm32f1xx_hal_dma.o"
+"broad1\stm32f1xx_hal_cortex.o"
+"broad1\stm32f1xx_hal_pwr.o"
+"broad1\stm32f1xx_hal_flash.o"
+"broad1\stm32f1xx_hal_flash_ex.o"
+"broad1\stm32f1xx_hal_exti.o"
+"broad1\stm32f1xx_hal_i2c.o"
+"broad1\system_stm32f1xx.o"
+"broad1\oled.o"
+--strict --scatter "Broad1\Broad1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Broad1.map" -o Broad1\Broad1.axf
